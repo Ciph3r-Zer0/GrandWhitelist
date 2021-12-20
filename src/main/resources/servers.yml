@@ -1,0 +1,4 @@
+servers:
+  global:
+    whitelist: false
+    whitelisted: []

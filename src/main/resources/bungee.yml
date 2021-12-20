@@ -1,0 +1,4 @@
+name: GrandWhitelist
+version: '${project.version}'
+main: ir.ciph3r.grandwhitelist.GrandWhitelist
+description: Fully customizable whitelist plugin

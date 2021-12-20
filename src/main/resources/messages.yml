@@ -1,0 +1,12 @@
+usage:
+  -
+  -
+
+server_not_found: "server not found"
+whitelist_enabled: "whitelist enabled"
+whitelist_disabled: "whitelist disabled"
+player_added: "player added"
+player_removed: "player removed"
+player_already_whitelisted: "player already whitelisted"
+player_wasnot_whitelisted: "player wasnot whitelisted"
+whitelisted_message: "&cserver is whitelisted"

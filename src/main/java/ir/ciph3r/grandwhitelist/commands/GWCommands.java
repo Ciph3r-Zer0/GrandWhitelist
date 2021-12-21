@@ -84,6 +84,8 @@ public class GWCommands extends Command {
 					sender.sendMessage(TextComponent.fromLegacyText(Messages.PLAYER_REMOVED));
 				}
 			}
+		} else {
+			Messages.USAGE_MESSAGE.forEach(s -> sender.sendMessage(TextComponent.fromLegacyText(s)));
 		}
 	}
 }

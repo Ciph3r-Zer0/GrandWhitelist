@@ -1,7 +1,7 @@
 servers:
-  bungee:
-    whitelist: false
-    whitelisted: []
   all:
     whitelist:
+    whitelisted: []
+  bungee:
+    whitelist: false
     whitelisted: []

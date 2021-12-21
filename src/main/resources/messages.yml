@@ -1,4 +1,4 @@
-usage:
+usage_command:
   -
   -
 
@@ -8,5 +8,7 @@ whitelist_disabled: "whitelist disabled"
 player_added: "player added"
 player_removed: "player removed"
 player_already_whitelisted: "player already whitelisted"
-player_wasnot_whitelisted: "player wasnot whitelisted"
-whitelisted_message: "&cserver is whitelisted"
+player_isnot_whitelisted: "player wasnot whitelisted"
+whitelist_message: "&cserver is whitelisted"
+no_permission: "no permission"
+not_enough_args: "not enough args"

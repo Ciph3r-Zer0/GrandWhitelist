@@ -1,0 +1,7 @@
+servers:
+  bungee:
+    whitelist: false
+    whitelisted: []
+  all:
+    whitelist:
+    whitelisted: []

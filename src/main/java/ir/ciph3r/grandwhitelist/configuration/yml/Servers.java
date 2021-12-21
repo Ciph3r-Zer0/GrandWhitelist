@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class Servers {
 	private static Configuration configuration;
-	private static final File file = new File(GrandWhitelist.getInstance().getDataFolder(), "servers.yml");
+	private static final File file = new File(GrandWhitelist.getInstance().getDataFolder(), "storage.yml");
 
 	public static void create() throws IOException {
 		if (!(GrandWhitelist.getInstance().getDataFolder().exists())) {
@@ -24,13 +24,12 @@ public class Servers {
 	}
 
 		if (!file.exists()) {
-			try (InputStream in = GrandWhitelist.getInstance().getResourceAsStream("servers.yml")) {
+			try (InputStream in = GrandWhitelist.getInstance().getResourceAsStream("storage.yml")) {
 				Files.copy(in, file.toPath());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-
 		configuration = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
 	}
 

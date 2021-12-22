@@ -1,4 +1,4 @@
-package ir.ciph3r.grandwhitelist.configuration.data;
+package ir.ciph3r.grandwhitelist.configuration.data.storage;
 
 import java.util.Collection;
 import java.util.List;

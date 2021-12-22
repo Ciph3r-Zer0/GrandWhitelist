@@ -1,6 +1,6 @@
 package ir.ciph3r.grandwhitelist.configuration.yml;
 
-public class Config extends YmlModel{
+public class Config extends YmlModel {
 	public static String STORAGE_TYPE;
 
 	public Config() {

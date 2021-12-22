@@ -1,6 +1,11 @@
 package ir.ciph3r.grandwhitelist.configuration.data;
 
+import ir.ciph3r.grandwhitelist.configuration.data.storage.DataModel;
+import ir.ciph3r.grandwhitelist.configuration.data.storage.FileBased;
+import ir.ciph3r.grandwhitelist.configuration.data.storage.MySQLBased;
+import ir.ciph3r.grandwhitelist.configuration.data.storage.Permissions;
 import ir.ciph3r.grandwhitelist.configuration.yml.Config;
+import org.yaml.snakeyaml.error.YAMLException;
 
 public class Data {
 	public static DataModel dataModel;
@@ -16,7 +21,7 @@ public class Data {
 			mySQLBased.setup();
 			dataModel = new MySQLBased();
 		} else {
-			//TODO: Handle other wierd strings
+			throw new YAMLException("Storage type can only be File or MySQL");
 		}
 		permissions.init();
 	}

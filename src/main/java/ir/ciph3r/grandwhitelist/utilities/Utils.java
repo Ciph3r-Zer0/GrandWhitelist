@@ -14,7 +14,12 @@ public class Utils {
 	public static void sendMessage(CommandSender sender, String msg) {
 		sender.sendMessage(new TextComponent(colorize(msg)));
 	}
+
 	public static void sendMessage(ProxiedPlayer player, String msg) {
 		player.sendMessage(new TextComponent(colorize(msg)));
+	}
+
+	public static TextComponent colorizedComponent(String msg) {
+		return new TextComponent(colorize(msg));
 	}
 }

@@ -1,4 +1,4 @@
-package ir.ciph3r.grandwhitelist.configuration.data;
+package ir.ciph3r.grandwhitelist.configuration.data.storage;
 
 import ir.ciph3r.grandwhitelist.GrandWhitelist;
 import net.md_5.bungee.api.config.ServerInfo;
@@ -15,7 +15,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-public class FileBased implements DataModel{
+public class FileBased implements DataModel {
 	private Configuration configuration;
 	private String fileName;
 	private File file;
@@ -77,7 +77,9 @@ public class FileBased implements DataModel{
 	public boolean isWhitelisted(String serverName) {
 		if (configuration.getBoolean("servers." + serverName + ".whitelist")) {
 			return true;
-		} else { return false; }
+		} else {
+			return false;
+		}
 	}
 
 	@Override

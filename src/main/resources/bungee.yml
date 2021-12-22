@@ -1,4 +1,5 @@
 name: GrandWhitelist
 version: '${project.version}'
+author: Ciph3r
 main: ir.ciph3r.grandwhitelist.GrandWhitelist
 description: Fully customizable whitelist plugin

@@ -2,7 +2,7 @@ package ir.ciph3r.grandwhitelist.listeners;
 
 import ir.ciph3r.grandwhitelist.configuration.data.Data;
 import ir.ciph3r.grandwhitelist.configuration.yml.Messages;
-import net.md_5.bungee.api.chat.TextComponent;
+import ir.ciph3r.grandwhitelist.utilities.Utils;
 import net.md_5.bungee.api.event.LoginEvent;
 import net.md_5.bungee.api.event.ServerConnectEvent;
 import net.md_5.bungee.api.plugin.Listener;
@@ -34,12 +34,12 @@ public class V_1_18 implements Listener {
 		}
 		if (Data.dataModel.isWhitelisted("all")) {
 			if (!(Data.dataModel.playerExistsInWhitelist("all", event.getPlayer().getName()))) {
-				event.getPlayer().sendMessage(TextComponent.fromLegacyText(Messages.WHITELIST_MESSAGE));
+				Utils.sendMessage(event.getPlayer(), Messages.WHITELIST_MESSAGE);
 				event.setCancelled(true);
 			}
 		} else if (Data.dataModel.isWhitelisted(event.getTarget().getName())) {
 			if (!(Data.dataModel.playerExistsInWhitelist(event.getTarget().getName(), event.getPlayer().getName()))) {
-				event.getPlayer().sendMessage(TextComponent.fromLegacyText(Messages.WHITELIST_MESSAGE));
+				Utils.sendMessage(event.getPlayer(), Messages.WHITELIST_MESSAGE);
 				event.setCancelled(true);
 			}
 		}

@@ -20,7 +20,7 @@ public class GWCommands extends Command {
 			Messages.USAGE_MESSAGE.forEach(s -> Utils.sendMessage(sender, s));
 		} else if (args.length < 3) {
 			if (args[0].equalsIgnoreCase("On")) {
-				if (!(sender.hasPermission(""))) {
+				if (!(sender.hasPermission(Data.permissions.ENABLE_WHITELIST))) {
 					Utils.sendMessage(sender,Messages.NO_PERMISSION);
 				} else if (!(Data.dataModel.serverExists(args[1]))) {
 					Utils.sendMessage(sender, Messages.SERVER_NOT_FOUND);
@@ -29,7 +29,7 @@ public class GWCommands extends Command {
 					Utils.sendMessage(sender, Messages.WHITELIST_ENABLED);
 				}
 			} else if (args[0].equalsIgnoreCase("Off")) {
-				if (!(sender.hasPermission(""))) {
+				if (!(sender.hasPermission(Data.permissions.DISABLE_WHITELIST))) {
 					Utils.sendMessage(sender,Messages.NO_PERMISSION);
 				} else if (!(Data.dataModel.serverExists(args[1]))) {
 					Utils.sendMessage(sender, Messages.SERVER_NOT_FOUND);
@@ -38,7 +38,7 @@ public class GWCommands extends Command {
 					Utils.sendMessage(sender, Messages.WHITELIST_DISABLED);
 				}
 			} else if (args[0].equalsIgnoreCase("List")) {
-				if (!(sender.hasPermission(""))) {
+				if (!(sender.hasPermission(Data.permissions.LIST))) {
 					Utils.sendMessage(sender,Messages.NO_PERMISSION);
 				} else if (!(Data.dataModel.serverExists(args[1]))){
 					Utils.sendMessage(sender, Messages.SERVER_NOT_FOUND);
@@ -46,13 +46,13 @@ public class GWCommands extends Command {
 					Data.dataModel.getWhitelistPlayerList(args[1]).forEach(s -> Utils.sendMessage(sender, s));
 				}
 			} else if (args[0].equalsIgnoreCase("Add")) {
-				if (!(sender.hasPermission(""))) {
+				if (!(sender.hasPermission(Data.permissions.ADD_TO_WHITELIST))) {
 					Utils.sendMessage(sender,Messages.NO_PERMISSION);
 				} else {
 					Utils.sendMessage(sender, Messages.NOT_ENOUGH_ARGS);
 				}
 			} else if (args[0].equalsIgnoreCase("Remove")) {
-				if (!(sender.hasPermission(""))) {
+				if (!(sender.hasPermission(Data.permissions.REMOVE_FROM_WHITELIST))) {
 					Utils.sendMessage(sender,Messages.NO_PERMISSION);
 				} else {
 					Utils.sendMessage(sender, Messages.NOT_ENOUGH_ARGS);
@@ -62,7 +62,7 @@ public class GWCommands extends Command {
 			}
 		} else if (args.length < 4) {
 			if (args[0].equalsIgnoreCase("Add")) {
-				if (!(sender.hasPermission(""))) {
+				if (!(sender.hasPermission(Data.permissions.ADD_TO_WHITELIST))) {
 					Utils.sendMessage(sender,Messages.NO_PERMISSION);
 				} else if (!(Data.dataModel.serverExists(args[1]))) {
 					Utils.sendMessage(sender, Messages.SERVER_NOT_FOUND);
@@ -73,7 +73,7 @@ public class GWCommands extends Command {
 					Utils.sendMessage(sender, Messages.PLAYER_ADDED);
 				}
 			} else if (args[0].equalsIgnoreCase("Remove")) {
-				if (!(sender.hasPermission(""))) {
+				if (!(sender.hasPermission(Data.permissions.REMOVE_FROM_WHITELIST))) {
 					Utils.sendMessage(sender,Messages.NO_PERMISSION);
 				} else if (!(Data.dataModel.serverExists(args[1]))) {
 					Utils.sendMessage(sender, Messages.SERVER_NOT_FOUND);

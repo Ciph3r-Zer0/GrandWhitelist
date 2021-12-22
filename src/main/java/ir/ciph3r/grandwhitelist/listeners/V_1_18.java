@@ -21,6 +21,7 @@ public class V_1_18 implements Listener {
 				event.setCancelled(true);
 			}
 		} else if (Data.dataModel.isWhitelisted("bungee")) {
+			if (Data.dataModel.playerExistsInWhitelist("all", event.getConnection().getName())) return;
 			if (!(Data.dataModel.playerExistsInWhitelist("bungee", event.getConnection().getName()))) {
 				event.setCancelReason(Messages.WHITELIST_MESSAGE);
 				event.setCancelled(true);
@@ -38,6 +39,7 @@ public class V_1_18 implements Listener {
 				event.setCancelled(true);
 			}
 		} else if (Data.dataModel.isWhitelisted(event.getTarget().getName())) {
+			if (Data.dataModel.playerExistsInWhitelist("all", event.getPlayer().getName())) return;
 			if (!(Data.dataModel.playerExistsInWhitelist(event.getTarget().getName(), event.getPlayer().getName()))) {
 				Utils.sendMessage(event.getPlayer(), Messages.WHITELIST_MESSAGE);
 				event.setCancelled(true);

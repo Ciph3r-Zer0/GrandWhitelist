@@ -6,7 +6,7 @@
 
     <groupId>ir.ciph3r</groupId>
     <artifactId>GrandWhitelist</artifactId>
-    <version>1.2.0-Beta</version>
+    <version>1.2.1-Beta</version>
     <packaging>jar</packaging>
 
     <name>GrandWhitelist</name>

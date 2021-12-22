@@ -9,7 +9,6 @@ import net.md_5.bungee.api.plugin.Plugin;
 
 public final class GrandWhitelist extends Plugin {
 
-	//TODO: fix Command permissions
 	//TODO: fix whitelist name case sensitivity
 
 	private static GrandWhitelist plugin;

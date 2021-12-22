@@ -15,6 +15,8 @@ public class Data {
 		} else if (Config.STORAGE_TYPE.equalsIgnoreCase("MySQL")) {
 			mySQLBased.setup();
 			dataModel = new MySQLBased();
+		} else {
+			//TODO: Handle other wierd strings
 		}
 		permissions.init();
 	}

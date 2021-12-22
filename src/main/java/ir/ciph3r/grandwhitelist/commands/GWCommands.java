@@ -17,7 +17,7 @@ public class GWCommands extends Command {
 		if (args.length < 1) {
 			Messages.USAGE_MESSAGE.forEach(s -> Utils.sendMessage(sender, s));
 		} else if (args.length < 2) {
-			Messages.USAGE_MESSAGE.forEach(s -> Utils.sendMessage(sender, s));
+			Utils.sendMessage(sender, Messages.NOT_ENOUGH_ARGS);
 		} else if (args.length < 3) {
 			if (args[0].equalsIgnoreCase("On")) {
 				if (!(sender.hasPermission(Data.permissions.ENABLE_WHITELIST))) {

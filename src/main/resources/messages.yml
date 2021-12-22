@@ -1,3 +1,4 @@
+prefix: "&b&lGrand&c&lWhitelist &8>> "
 usage_command:
   - "&b&lGrand&c&lWhitelist &8>> &5GrandWhitelist Version &b1.1.0-Beta &5By &5Ciph3r"
   - "&5&l*  &bUsage>> &c/grandwhitelist <on/off/add/remove/list> <servername> (playername)"

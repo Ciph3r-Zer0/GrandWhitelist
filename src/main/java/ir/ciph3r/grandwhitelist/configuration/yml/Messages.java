@@ -3,6 +3,7 @@ package ir.ciph3r.grandwhitelist.configuration.yml;
 import java.util.List;
 
 public class Messages extends YmlModel {
+	public static String PREFIX;
 	public static List<String> USAGE_MESSAGE;
 	public static String SERVER_NOT_FOUND;
 	public static String WHITELIST_ENABLED;
@@ -21,6 +22,7 @@ public class Messages extends YmlModel {
 
 	@Override
 	public void init() {
+		PREFIX = getConfig().getString("prefix");
 		USAGE_MESSAGE = getConfig().getStringList("usage_command");
 		SERVER_NOT_FOUND = getConfig().getString("server_not_found");
 		WHITELIST_ENABLED = getConfig().getString("whitelist_enabled");

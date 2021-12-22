@@ -26,15 +26,9 @@ public abstract class YmlModel {
 		if (!(file.exists())) {
 			try (InputStream in = GrandWhitelist.getInstance().getResourceAsStream(fileName)) {
 				Files.copy(in, file.toPath());
+				configuration = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
 			} catch (IOException e) {
 				e.printStackTrace();
-			} finally {
-				//TODO: maybe a better way?
-				try {
-					configuration = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
 			}
 		}
 		init();
